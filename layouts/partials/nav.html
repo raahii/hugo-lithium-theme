@@ -4,11 +4,18 @@
          width="{{ .Site.Params.logo.width }}" 
          height="{{ .Site.Params.logo.height }}" 
          alt="{{ .Site.Params.logo.alt }}">
+    <p class="nav-title"> {{ .Site.Title }} </p>
   </a>
 
   <ul class="nav-links">
     {{ range .Site.Menus.main }}
-    <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+    <li>
+      {{ if in .Name "About" }}
+        <a href="{{ .URL }}">{{ .Name }}</a>
+      {{ else }}
+        <a href="{{ .URL }}" target="_blank">{{ .Name }}</a>
+      {{ end }}
+    </li>
     {{ end }}
   </ul>
 </nav>
