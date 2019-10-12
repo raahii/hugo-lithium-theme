@@ -146,7 +146,7 @@ img {
 }
 
 .article-duration {
-  margin-top: 12px;
+  margin: 5px 10px 0 0;
   float: right;
   font-size: 10px;
   font-family: 'Lato', sans-serif;
@@ -161,7 +161,7 @@ img {
   margin: 15px 0 25px;
 }
 
-.article-content a {
+.article-content a:not(.dont-hightlight) {
   text-decoration: none;
   color: inherit;
   border-bottom: 3px solid #CBF8DF;
@@ -170,8 +170,8 @@ img {
   transition: background 150ms ease;
 }
 
-.article-content a:hover,
-.article-content a:focus {
+.article-content a:not(.dont-hightlight):hover,
+.article-content a:not(.dont-hightlight):focus {
   background: #CBF8DF;
 }
 
