@@ -43,13 +43,29 @@ a {
   outline: none;
 }
 
-code {
+/* inline code block */
+p > code {
   font-family: Menlo, Monaco, Courier;
   font-size: 80%;
   background-color: rgba(0, 0, 0, 0.05);
+
   padding: 2px 4px;
   font-weight: 100;
   box-sizing: inherit;
+}
+
+/* multiline code block */
+pre > code {
+  font-family: Menlo, Monaco, Courier;
+  font-size: 80%;
+  background-color: rgba(27,31,35,.05);
+  display: block;
+
+  padding: 1.5em;
+  font-size: .875rem;
+  line-height: 1.6;
+  overflow-x: auto;
+  border-radius: 3px;
 }
 
 img {
