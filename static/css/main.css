@@ -78,6 +78,8 @@ img {
   float: left;
   margin-top: -11px;
   transition: transform 150ms ease-out;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .nav-logo:hover {
@@ -88,6 +90,14 @@ img {
   display: block;
   max-height: 40px;
   width: auto;
+}
+
+.nav-logo  p {
+  margin: 12px 0px 0px 15px;
+  font-size: 20px;
+  color: #111;
+
+  display: none;
 }
 
 .nav-links {
@@ -297,10 +307,16 @@ img {
 
   .nav-logo {
     margin-top: -13px;
+    display: flex;
+    justify-content: space-between;
   }
 
   .nav-logo img {
     max-height: 50px;
+  }
+
+  .nav-logo  p {
+    display: block;
   }
 
   .nav-links {
