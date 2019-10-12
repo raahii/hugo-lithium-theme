@@ -14,5 +14,8 @@
     </div>
 
     {{ template "_internal/google_analytics.html" . }}
+    {{ if or .Params.math .Site.Params.math }}
+      {{ partial "math.html" . }}
+    {{ end }}
   </body>
 </html>
