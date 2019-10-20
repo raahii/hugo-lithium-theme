@@ -10,7 +10,7 @@
   <ul class="nav-links">
     {{ range .Site.Menus.main }}
     <li>
-      {{ if in .Name "About" }}
+      {{ if or (eq .Name "About") (eq .Name "Tags") }}
         <a href="{{ .URL }}">{{ .Name }}</a>
       {{ else }}
         <a href="{{ .URL }}" target="_blank">{{ .Name }}</a>
