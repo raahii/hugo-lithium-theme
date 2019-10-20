@@ -3,7 +3,7 @@
 <main class="content article-content list-content" role="main">
 
   {{ if eq .Title "Tags"}}
-      <h2>Tags</h2>
+      <h2 clas="archive-title">Tags</h2>
 
       {{ if lt 0 (len .Site.Taxonomies.tags) }}
       <ul>
@@ -13,7 +13,7 @@
       </ul>
       {{ end }}
 
-      <h2>Categories</h2>
+      <h2 clas="archive-title">Categories</h2>
       {{ if lt 0 (len .Site.Taxonomies.categories) }}
       <ul>
           {{ range .Site.Taxonomies.categories.ByCount }}
