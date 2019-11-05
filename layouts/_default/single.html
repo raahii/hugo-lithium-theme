@@ -12,6 +12,26 @@
     <span class="article-duration">{{ .ReadingTime }} min read</span>
     {{ end }}
 
+    {{ if eq .Section "post" }}
+    {{ with .Params.categories }}
+    <ul class="cp_tag01 article-categories">
+    Categories:
+    {{ range . }} 
+      <li><a href="/categories/{{ . }}/">{{ . }}</a></li>
+    {{ end }}
+    </ul>
+    {{ end }}
+
+    {{ with .Params.tags }}
+    <ul class="cp_tag01 article-tags">
+    Tags:
+    {{ range . }}
+      <li><a href="/tags/{{ . }}/">{{ . }}</a></li>
+    {{ end }}
+    </ul>
+    {{ end }}
+    {{ end }}
+
     <div class="article-content">
       {{ .Content }}
     </div>
