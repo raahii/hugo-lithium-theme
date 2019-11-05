@@ -334,6 +334,10 @@ img {
   margin-top: 5px;
 }
 
+.katex {
+  font-size: 1.1em !important;
+}
+
 @media (min-width: 600px) {
   h1 {
     font-size: 28px;
